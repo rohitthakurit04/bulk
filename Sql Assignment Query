@@ -1,0 +1,39 @@
+ /*CREATE TABLE salesman_11(
+   salesman_id  INT              NOT NULL,
+  name  VARCHAR (20)     NOT NULL,
+   city   VARCHAR(20)             NOT NULL,
+   commision  DECIMAL (18, 2),       
+   PRIMARY KEY (salesman_id)
+);
+drop table salesman; 
+*/
+/*
+INSERT INTO salesman_11 values ( 5001, 'James Hoog', 'New York', 0.15 );
+INSERT INTO SALESMAN_11 values ( 5002, 'Nail Knite', 'Paris', 0.13 );
+INSERT INTO SALESMAN_11 values ( 5005, 'Pit Alex', 'London', 0.11 );
+INSERT INTO SALESMAN_11 values ( 5006, 'Mc Lyon', 'Paris', 0.14 );
+INSERT INTO SALESMAN_11 values ( 5003, 'Lauson Hen', 'London', 0.12 );
+
+INSERT INTO SALESMAN_11 values ( 5007, 'Paul Adam', 'Rome',0.13 ); 
+Select * from SALESMAN_11; */
+/*CREATE TABLE Orders (
+    Order_No int NOT NULL,
+    Purchase_amt int NOT NULL,
+    Ord_Date int,
+
+    PRIMARY KEY (Order_No),
+    FOREIGN KEY (salesman_id) REFERENCES salesman_11(salesman_id)
+	
+    FOREIGN KEY (Customer_id) REFERENCES customer(Customer_id)
+);*/
+/*CREATE TABLE customer (
+    Customer_id int NOT NULL,
+    Cust_name int NOT NULL,
+    City VARCHAR(20),
+	Grade  int,
+	Salesman_id int ,
+
+    PRIMARY KEY (Customer_id),
+    
+);*/
+Select * from customer;
