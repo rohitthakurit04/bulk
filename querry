@@ -1,0 +1,78 @@
+/*INSERT INTO Orders   values (  70001    ,   150.5     ,  '2012-10-05',  5002     ,   3005);
+INSERT INTO Orders values (   70009 , 270.65    , '2012-09-10'   ,   5005  ,3001 );
+INSERT INTO Orders values (   70002 , 65.26    , '2012-10-05' ,       5001,   3002  );
+INSERT INTO Orders values (  70004 , 110.5   , '2012-08-17'     ,        5003,   3009 );
+INSERT INTO Orders values ( 70007 , 948.5, '2012-09-10'       ,        5002,   3005 );
+INSERT INTO Orders values (  70005 , 2400.6 , '2012-07-27'     ,        5001 ,   3007 ); 
+INSERT INTO Orders values (     70008 , 5760   , '2012-09-10'      ,        5001,   3002);
+INSERT INTO Orders values (      70010 , 1983.43   , '2012-10-10'     ,    5006 ,    3004);
+INSERT INTO Orders values (      70003 , 2480.4   , '2012-10-10'      ,    5002,    3009);
+INSERT INTO Orders values (      70011 , 75.29   , '2012-08-17'     , 5007,    3003 );
+INSERT INTO Orders values (      70013 , 3045.6   , '2012-04-25'     ,  5001, 3002 );*/
+
+
+/*SELECT *
+FROM orders
+WHERE salesman_id =
+    (SELECT salesman_id 
+     FROM salesman_11
+     WHERE name='Paul Adam');*/
+
+
+/*SELECT *
+FROM orders
+WHERE salesman_id =
+    (SELECT DISTINCT salesman_id 
+     FROM orders 
+     WHERE customer_id =3007);*/
+
+	/* SELECT *
+FROM orders
+WHERE purchase_amt >
+    (SELECT  AVG(purchase_amt) 
+     FROM orders 
+     WHERE ord_date ='10/10/2012');*/
+
+
+/*select name,commision from salesman_11;*/
+/*select Ord_Date,salesman_id,Order_No,purchase_amt from orders;*/
+/*select distinct salesman_id from orders;*/
+/*select Order_No,ord_date,purchase_amt from orders where salesman_id=5001;*/
+/*select Customer_id,Cust_name,City,Grade,Salesman_id from customer where grade>100 and city='New York';*/
+/*select Customer_id,Cust_name,City,Grade,Salesman_id from customer where grade>100 or city='New York';*/
+/*select Customer_id,Cust_name,City,Grade,Salesman_id from customer where not grade>100 and not city='New York';*/
+/*select Order_No,purchase_amt,Ord_Date,Customer_id,salesman_id from orders where not ((ord_date='2012-09-10' and salesman_id<=5005)or purchase_amt=1000);*/
+
+/* statement-prepare a list with salesman name, customer name and their cities for the salesmen and customer who belongs to the same city.
+
+SELECT salesman_11.name AS "Salesman",
+customer.Cust_name, customer.City 
+FROM salesman_11,customer 
+WHERE salesman_11.city=customer.City;
+*/
+
+/* statement-arrange order according to order date in such manner that the latest date will come first then previous date
+
+select * from orders
+order by Ord_Date desc;
+*/
+
+/*statement-to know which salesman are working for which customer
+
+SELECT customer.Cust_name AS "Customer Name", 
+customer.City, salesman_11.name AS "Salesman", salesman_11.commision 
+FROM customer 
+INNER JOIN salesman_11
+ON customer.Salesman_id=salesman_11.salesman_id;
+
+*/
+
+/*statement-find list of customers who appointed a salesman for their jobs who does not live in same city where their customer lives nd gets a comision is above 12% 
+SELECT customer.Cust_Name AS "Customer Name", 
+customer.City, salesman_11.name AS "Salesman", salesman_11.city,salesman_11.commision  
+FROM customer  
+INNER JOIN salesman_11  
+ON customer.Salesman_id=salesman_11.salesman_id 
+WHERE salesman_11.commision>.12 
+AND customer.city NOT IN (salesman_11.city);
+*/
