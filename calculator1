@@ -1,0 +1,78 @@
+<html>
+   <head>
+
+   <script>
+       plusbutton=document.getElementById("plusbutton");
+       plusoperation=function(){
+           number1=document.getElementById("number1");
+           number2=document.getElementById("number2");
+           sum=parseInt(number1.value)+parseInt(number2.value);
+         console.log(sum);
+         showresult(sum);
+       }
+       plusbutton.addEventListener("click",plusoperation);
+
+       minusbutton=document.getElementById("minusbutton");
+       minusoperation=function(){
+           number1=document.getElementById("number1");
+           number2=document.getElementById("number2");
+           diff=parseInt(number1.value)-parseInt(number2.value);
+         console.log(diff);
+         showresult(diff)
+       }
+       minusbutton.addEventListener("click",minusoperation);   
+
+         multiplybutton=document.getElementById("multiplybutton");
+       multiplyoperation=function(){
+           number1=document.getElementById("number1");
+           number2=document.getElementById("number2");
+           product=parseInt(number1.value)*parseInt(number2.value);
+           console.log(product);
+           showresult(product)
+       }    
+       multiplybutton.addEventListener("click",multiplyoperation); 
+
+       divisionbutton=document.getElementById("divisionbutton");
+       divisionoperation=function(){
+           number1=document.getElementById("number1");
+           number2=document.getElementById("number2");
+           div=parseInt(number1.value)/parseInt(number2.value);
+          console.log(div);
+          showresult(div)
+
+       }  
+       divisionbutton.addEventListener("click",divisionoperation); 
+
+       showresult=function(result)
+       {
+           result=document.getElementById("result");
+           result.innerText=result;
+       }
+
+
+
+
+   </script>
+   </head>
+
+
+    
+   <body>
+     <h1>Calculator</h1>
+
+     <p>
+         <input type="number" id="number1">
+     </p>
+
+     <p>
+         <input type="number" id="number2">
+     </p>
+
+     <button id="plusbutton">+</button>
+     <button id="minusbutton">-</button>
+     <button id="multiplybutton">*</button>
+     <button id="divisonbutton">/</button>
+
+     <h2 id="result">result is:</h2>
+     </body>
+     </html>
