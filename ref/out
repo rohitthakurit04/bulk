@@ -1,0 +1,48 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string str = "sector38";
+
+
+            SetValue(ref str);
+
+           
+        }
+
+        static void SetValue(ref string str1)
+        {
+            string s ;
+          /*  Console.WriteLine("enter address");
+            a = Console.ReadLine();*/
+
+            Console.WriteLine("enter ur choice");
+
+            s = Console.ReadLine();
+            switch (s)
+            {
+
+                case "push":
+                    Console.WriteLine("str1 is address and it is push in list");
+                    break;
+
+                case "delete":
+                    Console.WriteLine("str1 is delete from adrress list");
+                    break;
+
+                case "view":
+                    Console.WriteLine("str1 is address");
+                    break;
+
+                default:
+                    Console.WriteLine("you are out from list");
+                    break;
+            }
+        }
+    }
+}
