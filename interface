@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp14
+{
+  public interface Iwriter
+    {
+        void WriteFile();
+    }
+
+    public class FileBase
+    {
+        public virtual void SetName()
+        {
+            Console.WriteLine("Setting name in the Writer Class");
+        }
+
+
+    }
+    public  class XmlWriter: FileBase, Iwriter
+    {
+        public void WriteFile()
+        {
+            Console.WriteLine(" Writing Filein the  XmlWriter Class");
+        }
+        public override void SetName()
+        {
+            base.SetName();
+            {
+                Console.WriteLine(" Setting name in the  XmlWriter Class");
+            }
+        }
+        public class Pro
+        {
+            public static void Main()
+            {
+                Iwriter writer = new XmlWriter();
+              writer.WriteFile();
+               // writer.SetName();
+                Console.ReadLine();
+            }
+        }
+
+    }
+}
