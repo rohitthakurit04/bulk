@@ -1,0 +1,8 @@
+ AddressRepository ar = new AddressRepository();
+            Address add = ar.Retrieve(10);
+           orderdisplayitem odi = new orderdisplayitem();
+
+            /*Customer c = new Customer(10);*/
+            Console.WriteLine(od.FirstName + " " + od.LastName + " " + s.OrderId + " " + od.OrderDate + " " + c.EmailAddress + " " + p.ProductName + " " + p.CurrentPrice);
+            Console.WriteLine(add.AddressId + " " + add.StreetLine1 + " " + add.StreetLine2 + " " + add.City + " " + add.State + " " + add.Country);
+            /*Console.WriteLine();*/
