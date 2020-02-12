@@ -1,0 +1,17 @@
+@model BethanyPieShop.Models.Pie
+
+<h1>@Model.Name</h1>
+
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <img src="@Model.ImageUrl" alt="@Model.Name">
+        <div class="caption-full">
+            <h3 class="pull-right">@Model.Price </h3>
+            <h3>
+                <a href="#">@Model.Name</a>
+            </h3>
+            <p>@Model.LongDescription</p>
+            <p> @Model.ShortDescription</p>
+        </div>
+    </div>
+</div>
